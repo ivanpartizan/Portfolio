@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400;500;600&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap");
+
 :root {
   --bgColor: #031a30;
   --primaryColor: #00eaff;
@@ -8,8 +9,7 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Advent Pro", sans-serif;
 }
 
@@ -35,4 +35,3 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--hoverColor);
 }
-/*# sourceMappingURL=style.css.map */
