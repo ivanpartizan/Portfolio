@@ -3,7 +3,12 @@
 :root {
   --bgColor: #031a30;
   --primaryColor: #00eaff;
+  --secondaryColor: rgb(150, 162, 188);
+  --textColor: #dae4fb;
+  --paragraphColor: rgb(127, 127, 175);
   --hoverColor: hsl(185, 92%, 41%);
+  --cardColor: #072340;
+  --formColor: rgb(2, 15, 29);
 }
 
 * {
@@ -22,6 +27,18 @@ body {
   height: 200vh;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
 .header {
   width: 100%;
   height: 10%;
@@ -34,6 +51,193 @@ body {
   z-index: 100;
 
   .logo {
+    color: var(--textColor);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+
+    span {
+      font-size: 50px;
+      color: var(--primaryColor);
+    }
+  }
+
+  .toggleIcon {
+    color: var(--primaryColor);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+}
+
+.headerActive {
+  background: var(--cardColor);
+  transition: 0.5s;
+  box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    top: -600%;
+    left: 0;
+    right: 0;
+    background: var(--formColor);
+    padding: 16px 0;
+    transition: 0.5s;
+    border-bottom: 2px solid var(--primaryColor);
+    backdrop-filter: blur(5px);
+    z-index: 150;
+  }
+}
+
+.list {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  gap: 0.5rem 2rem;
+
+  .closeIcon {
+    position: absolute;
+    top: 10px;
+
+    .icon {
+      color: var(--primaryColor);
+      font-size: 30px;
+
+      &:hover {
+        color: var(--hoverColor);
+      }
+    }
+  }
+}
+
+.list-item {
+  margin: auto;
+  padding: 16px 0;
+}
+
+.list-link {
+  color: var(--primaryColor);
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+
+  .number {
+    color: var(--hoverColor);
+  }
+}
+
+.list-link:hover {
+  color: var(--hoverColor);
+}
+
+.list-link::before {
+  content: "";
+  position: absolute;
+  background: var(--hoverColor);
+  height: 2px;
+  width: 0%;
+  bottom: -3px;
+  left: 0;
+  transition: 0.3s;
+}
+.list-link::after {
+  content: "";
+  position: absolute;
+  background: var(--primaryColor);
+  height: 2px;
+  width: 0%;
+  bottom: -3px;
+  left: 0;
+  transition: 0.8s;
+}
+
+.list-link:hover::before {
+  width: 100%;
+}
+.list-link:hover::after {
+  width: 100%;
+}
+
+.resume {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+
+  .resumeBtn {
+    border: 2px solid var(--hoverColor);
+    padding: 0.5rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    position: relative;
+    color: var(--primaryColor);
+  }
+
+  .resumeBtn::before {
+    content: "";
+    height: 100%;
+    width: 0%;
+    background: var(--hoverColor);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.2s;
+  }
+  .resumeBtn::after {
+    content: "";
+    height: 100%;
+    width: 0%;
+    background: var(--bgColor);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+  }
+  .resumeBtn:hover {
+    color: var(--textColor);
+    border: 2px solid var(--bgColor);
+  }
+  .resumeBtn:hover::before,
+  .resumeBtn:hover::after {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .navbar {
+    display: flex;
+  }
+
+  .closeIcon {
+    display: none;
+  }
+
+  .header {
+    padding: 3rem 4rem;
+  }
+
+  .list {
+    display: flex;
+    margin-right: 1rem;
+
+    .list-link {
+      color: var(--textColor);
+      font-size: 1rem;
+    }
+  }
+
+  .navToggle {
+    display: none;
+  }
+
+  .resume {
+    .resumeBtn {
+      color: var(--secondaryColor);
+    }
   }
 }
 
