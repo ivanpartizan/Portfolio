@@ -39,6 +39,68 @@ li {
   list-style: none;
 }
 
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+video {
+  width: 100%;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.sectionTitle {
+  padding-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--textColor);
+  display: flex;
+  align-items: center;
+
+  .titleNumber {
+    color: var(--primaryColor);
+    margin: 0 0.6rem;
+    font-weight: 600;
+  }
+
+  .titleText {
+    position: relative;
+    width: max-content;
+  }
+  .underline {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 35px;
+    left: 0;
+    border-radius: 10px;
+    background: var(--secondaryColor);
+    overflow: hidden;
+  }
+  .underline span {
+    top: 0;
+    left: 10px;
+    height: 100%;
+    width: 10px;
+    border-radius: 10px;
+    position: absolute;
+    background: var(--textColor);
+    animation: moveLine 2s linear infinite;
+  }
+}
+
 .header {
   width: 100%;
   height: 10%;
@@ -79,11 +141,11 @@ li {
 @media screen and (max-width: 768px) {
   .navbar {
     position: absolute;
-    top: -600%;
+    top: -700%;
     left: 0;
     right: 0;
     background: var(--formColor);
-    padding: 16px 0;
+    padding: 1rem 0;
     transition: 0.5s;
     border-bottom: 2px solid var(--primaryColor);
     backdrop-filter: blur(5px);
@@ -96,7 +158,7 @@ li {
   width: 90%;
   margin: auto;
   display: grid;
-  gap: 0.5rem 2rem;
+  gap: 0.6rem 2rem;
 
   .closeIcon {
     position: absolute;
@@ -207,7 +269,187 @@ li {
   }
 }
 
+// Home section CSS
+
+.content {
+  margin: 4rem 0;
+
+  .contentText {
+    margin: 1rem 0;
+
+    .introTxt {
+      font-size: 1rem;
+      color: var(--primaryColor);
+      padding: 1rem 0;
+      letter-spacing: 1px;
+    }
+
+    .name {
+      font-size: 3rem;
+      font-weight: 600;
+      color: var(--textColor);
+    }
+
+    .subIntro {
+      font-size: 2rem;
+      color: var(--secondaryColor);
+      line-height: 2rem;
+      padding: 0.5rem 0;
+    }
+
+    .homeP {
+      font-size: 1.3rem;
+      color: var(--paragraphColor);
+      padding: 1rem 0;
+      max-width: 600px;
+    }
+  }
+  .contentBtn {
+    margin: 2rem 0;
+    overflow: hidden;
+    padding: 0.3rem 0;
+    a {
+      padding: 1rem 1.5rem;
+      border: 2px solid var(--primaryColor);
+      border-radius: 3rem;
+      color: var(--BgColor);
+      font-weight: 600;
+      font-size: 1.2rem;
+      overflow: hidden;
+      position: relative;
+      overflow: hidden;
+      background: var(--primaryColor);
+      z-index: 2;
+      .icon {
+        margin-left: 0.6rem;
+        cursor: pointer;
+      }
+    }
+
+    a::before {
+      content: "";
+      height: 100%;
+      width: 0%;
+      background: var(--primaryHover);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-radius: 3rem;
+      z-index: -1;
+      transition: 0.2s;
+    }
+    a::after {
+      content: "";
+      height: 100%;
+      width: 0%;
+      background: var(--BgColor);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-radius: 3rem;
+      z-index: -1;
+      transition: 0.6s;
+    }
+    a:hover {
+      color: var(--formColor);
+      font-weight: 600;
+      border: none;
+      z-index: 2;
+    }
+    a:hover::before,
+    a:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+// @media screen and (min-width: 767px) {
+//   .section {
+//     padding: 6rem 0 4rem;
+//   }
+
+//   .navbar {
+//     display: flex;
+//   }
+
+//   .closeIcon {
+//     display: none;
+//   }
+
+//   .header {
+//     padding: 3rem 4rem;
+//   }
+
+//   .list {
+//     display: flex;
+//     margin-right: 1rem;
+
+//     .list-link {
+//       color: var(--textColor);
+//       font-size: 1rem;
+//     }
+//   }
+
+//   .navToggle {
+//     display: none;
+//   }
+
+//   .resume {
+//     .resumeBtn {
+//       color: var(--secondaryColor);
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 960px) {
+//   .bodyContainer {
+//     width: 65%;
+//     margin: auto;
+//   }
+// }
+
+// @media screen and (min-width: 1080px) {
+//   .home {
+//     .container {
+//       padding: 1rem 4rem;
+//     }
+//   }
+// }
+
+@media screen and (min-width: 368px) {
+  .ctaDescription {
+    text-align: justify;
+  }
+}
+
+@media screen and (min-width: 645px) {
+  .skillsContent {
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  table {
+    .containerTitle {
+      th {
+        font-size: 20px !important;
+      }
+    }
+    .projectListItem {
+      font-size: 20px !important;
+    }
+  }
+}
+
 @media screen and (min-width: 767px) {
+  .section {
+    padding: 6rem 0 4rem;
+  }
+
   .navbar {
     display: flex;
   }
@@ -219,7 +461,6 @@ li {
   .header {
     padding: 3rem 4rem;
   }
-
   .list {
     display: flex;
     margin-right: 1rem;
@@ -238,6 +479,191 @@ li {
     .resumeBtn {
       color: var(--secondaryColor);
     }
+  }
+
+  .boxes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .contactContent {
+    grid-template-columns: 200px 400px;
+    column-gap: 3rem;
+    justify-content: center;
+    margin-top: 5rem;
+
+    .contactTop {
+      height: max-content;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .bodyContainer {
+    width: 65%;
+    margin: auto;
+  }
+
+  .mobileIcons {
+    display: none;
+  }
+
+  .col {
+    position: fixed;
+    bottom: 0;
+    padding: 0 1rem;
+    margin: 0 4rem;
+    display: block;
+
+    .leftCol {
+      left: 0;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .divLine {
+      content: "";
+      height: 150px;
+      width: 1px;
+      background: var(--secondaryColor);
+      transform: translateX(10px);
+    }
+
+    .leftColIcon {
+      font-size: 1.5rem;
+      color: var(--secondaryColor);
+      font-weight: 400;
+      margin-bottom: 1rem;
+      display: block;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    .leftColIcon:hover {
+      color: var(--primaryColor);
+      transform: translateY(-3px);
+    }
+  }
+
+  .rightCol {
+    right: -5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .emailDiv {
+    color: var(--secondaryColor);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transform: rotate(90deg) translate(-90px, -12px);
+    &:hover {
+      color: var(--primaryColor);
+    }
+  }
+  .rightdivLine {
+    content: "";
+    height: 150px;
+    width: 1px;
+    background: var(--secondaryColor);
+    transform: translateX(10px);
+  }
+
+  .contentText {
+    .introTxt {
+      font-size: 1.5rem !important;
+    }
+
+    .name {
+      font-size: 4rem !important;
+    }
+
+    .subIntro {
+      font-size: 2rem !important;
+    }
+
+    .homeP {
+      font-size: 1.5rem !important;
+    }
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .home {
+    .container {
+      padding: 1rem 4rem;
+    }
+  }
+
+  .archiveSection {
+    .titleSubText {
+      font-size: 20px;
+    }
+    .underline {
+      margin-top: 1rem;
+    }
+    .titleText {
+      font-size: 45px !important;
+    }
+  }
+  .contentText {
+    .introTxt {
+      font-size: 1.2rem !important;
+    }
+
+    .name {
+      font-size: 4em !important;
+    }
+
+    .subIntro {
+      font-size: 2.4rem !important;
+    }
+
+    .homeP {
+      font-size: 1.7rem !important;
+    }
+  }
+
+  .ctaDescription {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .skillsContent {
+    grid-template-columns: repeat(3, 1fr);
+    .skillInfo {
+      margin: auto;
+    }
+  }
+  .contentText {
+    .introTxt {
+      font-size: 1.3rem !important;
+    }
+
+    .name {
+      font-size: 5.5em !important;
+    }
+
+    .subIntro {
+      font-size: 2.8rem !important;
+      line-height: 2.5rem !important;
+    }
+
+    .homeP {
+      font-size: 1.7rem !important;
+    }
+  }
+
+  .ctaDescription {
+    font-size: 1.2rem !important;
   }
 }
 
