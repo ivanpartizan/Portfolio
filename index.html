@@ -4,53 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <title>Frontend Dev Portfolio</title>
+    <link rel="icon" href="./img/israIcon.png" />
+    <link rel="stylesheet" href="./main.css" />
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <header class="header" id="header">
-      <div class="logo">
+  <body oncopy="return false" oncut="return false" onpaste="return false">
+    <header class="header headerActive" id="header">
+      <div class="logo-div">
         <a href="#home"
-          ><h1>IM<span>.</span></h1></a
+          ><h1 class="logo">Im<span>.</span></h1></a
         >
       </div>
-      <nav class="navbar">
-        <ul class="list">
-          <li class="list-item">
-            <a href="#about" class="list-link"
-              ><span class="number">01</span> My Story</a
+
+      <div class="navBar" id="nav-Bar">
+        <ul class="navList">
+          <li class="navItem">
+            <a href="#about" class="navLink">
+              <span class="number">01</span> My Story</a
             >
           </li>
-          <li class="list-item">
-            <a href="#skills" class="list-link">
+
+          <li class="navItem">
+            <a href="#skills" class="navLink">
               <span class="number">02</span> Skills</a
             >
           </li>
-          <li class="list-item">
-            <a href="#projects" class="list-link">
+
+          <li class="navItem">
+            <a href="#projects" class="navLink">
               <span class="number">03</span> Projects</a
             >
           </li>
-          <li class="list-item">
-            <a href="#contact" class="list-link">
+
+          <li class="navItem">
+            <a href="#contact" class="navLink">
               <span class="number">04</span> Contact</a
             >
           </li>
 
-          <div class="closeIcon" id="closeIcon">
-            <i class="bx bxs-x-circle icon closeI"></i>
+          <div class="closeIcon" id="closeIconID">
+            <i class="bx bxs-x-circle icon closeIc"></i>
           </div>
         </ul>
 
-        <div class="resume">
+        <div class="resumeDiv">
           <a
             download=""
             href="./ISRAEL ABAHO FRONT END WEB DEVELOEPER RESUME.pdf"
@@ -58,12 +63,16 @@
             >Resume</a
           >
         </div>
-      </nav>
+      </div>
 
       <div class="navToggle" id="toggleId">
         <i class="uil uil-list-ui-alt toggleIcon"></i>
       </div>
     </header>
+
+    <!-- <div class="toTopBtn">
+        <a href="#contact"><i class="uil uil-angle-double-up toTopIcon"></i></a>
+    </div> -->
 
     <div class="col leftCol">
       <div class="divIcons">
@@ -91,6 +100,7 @@
       <div class="rightdivLine"></div>
     </div>
 
+    <!-- Body Section -->
     <div class="bodyContainer">
       <!-- Home section -->
       <section class="home section" id="home">
@@ -98,13 +108,10 @@
           <div class="content">
             <div class="contentText">
               <h6 class="introTxt">Hi, my name is</h6>
-
-              <h1 class="name">Ivan Milenkovic.</h1>
-
+              <h1 class="name">Israel Abaho.</h1>
               <h3 class="subIntro">
                 I design and develop web based components and systems.
               </h3>
-
               <p class="homeP">
                 I'm a frontend developer with basic knowledge in designing great
                 User interface and develop real life interactions.
@@ -124,6 +131,8 @@
           </div>
         </div>
       </section>
+
+      <!-- About section -------------------------------------------------->
 
       <section class="about section" id="about">
         <div class="container">
@@ -158,7 +167,6 @@
                   ></a>
                 </div>
               </div>
-
               <div class="lower">
                 <div class="aboutImgDiv">
                   <img
@@ -166,24 +174,6 @@
                     alt="Israel Image"
                     class="aboutImg"
                   />
-                </div>
-
-                <div class="voiceNote">
-                  <audio id="player" src="./Audio/Recording.m4a"></audio>
-                  <div class="player">
-                    <div class="controls">
-                      <i class="uil uil-play" id="playIcon"></i>
-                    </div>
-                    <div class="audioInfo">
-                      <span>Voice Intro</span>
-                      <div class="bar">
-                        <div id="progress"></div>
-                      </div>
-                    </div>
-                    <div id="current">
-                      <span>0:00</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -593,7 +583,7 @@
               <i class="uil uil-envelope-download contactIcon"></i>
               <span>
                 <h2 class="contactTitle">Email</h2>
-                <span class="contactDesc"> isrtech@gmail.com </span>
+                <span class="contactDesc"> argentinaivan@hotmail.com </span>
               </span>
             </div>
 
@@ -650,12 +640,15 @@
 
       <div class="mobileIcons">
         <div>
-          <a href="https://www.linkedin.com/in/isra-tech/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/ivan-milenkovic-07183034/"
+            target="_blank"
+          >
             <i class="uil uil-linkedin-alt leftColIcon"></i
           ></a>
         </div>
         <div>
-          <a href="https://github.com/IsraelAbaho" target="_blank"
+          <a href="https://github.com/ivanpartizan" target="_blank"
             ><i class="uil uil-github-alt leftColIcon"></i
           ></a>
         </div>
@@ -678,12 +671,6 @@
     </div>
 
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
-      integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="script.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
