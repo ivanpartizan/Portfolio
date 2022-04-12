@@ -532,64 +532,8 @@ video {
       }
     }
   }
-  .voiceNote {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primaryColor);
-    .player {
-      width: 100%;
-      max-width: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.7rem 1rem;
-      // border: 3px solid var(--primaryColor);
-      background: var(--BgColor);
-      border-radius: 3rem;
-      position: relative;
-
-      #playIcon {
-        font-size: 2rem;
-        color: var(--primaryColor);
-        cursor: pointer;
-      }
-      .playIcon:hover {
-        color: var(--primaryHover);
-      }
-    }
-
-    span {
-      color: var(--primaryColor);
-    }
-    #current {
-      span {
-        font-weight: 600;
-        transition: all 0.34s linear;
-      }
-    }
-
-    .bar {
-      --space: -4px;
-      background: var(--projectCardColor);
-      overflow: hidden;
-      left: var(--space);
-      right: var(--space);
-      top: var(--space);
-      bottom: var(--space);
-      position: absolute;
-      border-radius: 3rem;
-      z-index: -2;
-    }
-    #progress {
-      display: blcok;
-      width: var(--progress, 0%);
-      background: var(--primaryColor);
-      height: 100%;
-      transition: all 1s linear;
-    }
-  }
 }
+
 .col {
   display: none;
 }
