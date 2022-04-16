@@ -632,79 +632,6 @@ video {
   color: var(--textColor);
 }
 
-.about .voiceNote {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: var(--primaryColor);
-}
-
-.about .voiceNote .player {
-  width: 100%;
-  max-width: 400px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0.7rem 1rem;
-  background: var(--BgColor);
-  border-radius: 3rem;
-  position: relative;
-}
-
-.about .voiceNote .player #playIcon {
-  font-size: 2rem;
-  color: var(--primaryColor);
-  cursor: pointer;
-}
-
-.about .voiceNote .player .playIcon:hover {
-  color: var(--primaryHover);
-}
-
-.about .voiceNote span {
-  color: var(--primaryColor);
-}
-
-.about .voiceNote #current span {
-  font-weight: 600;
-  -webkit-transition: all 0.34s linear;
-  transition: all 0.34s linear;
-}
-
-.about .voiceNote .bar {
-  --space: -4px;
-  background: var(--projectCardColor);
-  overflow: hidden;
-  left: var(--space);
-  right: var(--space);
-  top: var(--space);
-  bottom: var(--space);
-  position: absolute;
-  border-radius: 3rem;
-  z-index: -2;
-}
-
-.about .voiceNote #progress {
-  display: blcok;
-  width: var(--progress, 0%);
-  background: var(--primaryColor);
-  height: 100%;
-  -webkit-transition: all 1s linear;
-  transition: all 1s linear;
-}
-
 .col {
   display: none;
 }
@@ -1042,21 +969,25 @@ form textarea {
 form ::-webkit-input-placeholder {
   color: var(--secondaryColor);
   font-weight: 600;
+  font-size: 1.2rem;
 }
 
 form :-ms-input-placeholder {
   color: var(--secondaryColor);
   font-weight: 600;
+  font-size: 1.2rem;
 }
 
 form ::-ms-input-placeholder {
   color: var(--secondaryColor);
   font-weight: 600;
+  font-size: 1.2rem;
 }
 
 form ::placeholder {
   color: var(--secondaryColor);
   font-weight: 600;
+  font-size: 1.2rem;
 }
 
 form button {
