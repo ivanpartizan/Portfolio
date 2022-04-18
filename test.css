@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 200vh;
+  background: #0e1c42;
+  font-family: "Advent Pro", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2%;
+  z-index: 100;
+  background: #0e1c42;
+}
+
+.headerActive {
+  background: #010912;
+  transition: 0.5s;
+  box-shadow: 0 2px 4px rgba(1, 9, 18, 0.9);
+}
+
+.logo .home {
+  color: #dae4fb;
+  font-size: 35px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  color: #40a3ff;
+  font-size: 40px;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navList {
+  display: flex;
+  margin-right: 1rem;
+}
+
+.navItem {
+  margin: auto;
+  padding: 1rem 0.625rem;
+}
+
+.navLink {
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  color: #dae4fb;
+}
+
+.number {
+  color: #40a3ff;
+}
+
+.navLink:hover {
+  color: #40a3ff;
+}
+
+.navLink::before {
+  content: "";
+  position: absolute;
+  background: #40a3ff;
+  height: 2px;
+  width: 0%;
+  bottom: -2px;
+  left: 0;
+  transition: 0.5s;
+}
+.navLink::after {
+  content: "";
+  position: absolute;
+  background: #40a3ff;
+  height: 2px;
+  width: 0%;
+  bottom: -2px;
+  left: 0;
+  transition: 1s;
+}
+
+.navLink:hover::before {
+  width: 100%;
+}
+.navLink:hover::after {
+  width: 100%;
+}
+
+.resume {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.resumeBtn {
+  position: relative;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: 2px solid #40a3ff;
+  color: #dae4fb;
+}
+
+.resumeBtn::before {
+  content: "";
+  height: 100%;
+  width: 0%;
+  background: #40a3ff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 1s;
+}
+.resumeBtn::after {
+  content: "";
+  height: 100%;
+  width: 0%;
+  background: #40a3ff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 1s;
+}
+
+.resumeBtn:hover {
+  border: 2px solid #0e1c42;
+}
+.resumeBtn:hover::before,
+.resumeBtn:hover::after {
+  width: 100%;
+}
+
+.menuIcon,
+.closeIcon {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .closeIcon {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+  }
+  .closeIcon i {
+    color: #40a3ff;
+  }
+  .menuIcon {
+    display: flex;
+    color: #40a3ff;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .navBar {
+    flex-direction: column;
+    position: absolute;
+    top: -666%;
+    right: 0;
+    left: 0;
+    background: #010912;
+    padding: 1rem 0;
+    transition: 1s;
+    z-index: 200;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #40a3ff;
+  }
+
+  .show {
+    top: 0;
+  }
+
+  .navList {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    gap: 0.5rem 2rem;
+  }
+
+  .navItem {
+    margin: auto;
+    padding: 1rem 0;
+  }
+}
+
+/* Custom Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #010912;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #40a3ff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(64, 163, 255, 0.8);
+}
