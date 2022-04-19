@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400;500;600&family=Ubuntu:wght@300;400;500;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -166,6 +166,55 @@ header {
   display: none;
 }
 
+.container {
+  width: 66%;
+  margin: auto;
+}
+
+section {
+  padding: 10% 5%;
+}
+
+.homeSection {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #dae4fb;
+}
+
+.homeSection h1 {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  margin-bottom: 6%;
+}
+
+.homeSection h2 {
+  text-align: center;
+  font-size: 50px;
+}
+
+.homeSection a {
+  margin-top: 6%;
+}
+
+section .content {
+  padding: 10% 0;
+}
+
+.about {
+  background: red;
+}
+
+/* p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  text-align: left;
+} */
+
 @media screen and (max-width: 767px) {
   .closeIcon {
     display: flex;
@@ -176,12 +225,14 @@ header {
   .closeIcon i {
     color: #40a3ff;
   }
+
   .menuIcon {
     display: flex;
     color: #40a3ff;
     font-size: 2rem;
     cursor: pointer;
   }
+
   .navBar {
     flex-direction: column;
     position: absolute;
@@ -211,6 +262,32 @@ header {
   .navItem {
     margin: auto;
     padding: 1rem 0;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  section {
+    padding: 8% 2%;
+  }
+
+  .homeSection h1 {
+    font-size: 75px;
+    font-weight: bold;
+    margin-bottom: 10%;
+  }
+
+  .homeSection h2 {
+    font-size: 30px;
+  }
+
+  .homeSection a {
+    margin-top: 10%;
+  }
+
+  section .content {
+    padding: 12% 0;
   }
 }
 

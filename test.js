@@ -23,3 +23,20 @@ function boxShadow() {
 }
 
 window.addEventListener("scroll", boxShadow);
+
+// typed.js
+let optionsOne = {
+  strings: ["Hello, my name is", "Hola, me llamo"],
+  typeSpeed: 100,
+  backSpeed: 20,
+  loop: true,
+};
+let optionsTwo = {
+  strings: ["Welcome to my website!", "Bienvenidos a mi página web!"],
+  typeSpeed: 100,
+  backSpeed: 20,
+  loop: true,
+};
+
+let typedOne = new Typed(".typedOne", optionsOne);
+let typedTwo = new Typed(".typedTwo", optionsTwo);
