@@ -242,12 +242,12 @@ section .content {
 }
 
 .underline span {
+  position: absolute;
+  width: 10px;
+  height: 100%;
   top: 0;
   left: 10px;
-  height: 100%;
-  width: 10px;
   border-radius: 10px;
-  position: absolute;
   background: #40a3ff;
   animation: moveLine 2s linear infinite;
 }
@@ -260,6 +260,74 @@ section .content {
   100% {
     left: 100px;
   }
+}
+
+.boxContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-top: 2rem;
+}
+
+.box {
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.box img:hover {
+  transform: scale(1.1);
+}
+
+.box .image {
+  height: 20rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.box .image img {
+  transition: all 0.2s linear;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.box .boxContent {
+  padding: 2rem;
+  text-align: center;
+}
+
+.boxContent div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxContent h3 {
+  font-size: 2rem;
+  color: black;
+}
+
+.boxContent p {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: red;
+  /* line-height: 1; */
+}
+
+.boxContent a {
+  font-size: 25px;
+  color: violet;
+  transition: all 0.2s linear;
+}
+
+.boxContent i {
+  padding-right: 0.5rem;
+  font-size: 20px;
+}
+
+.boxContent a:hover {
+  padding-left: 1rem;
 }
 
 /* Contact Form */
@@ -346,6 +414,12 @@ form button i {
   margin-left: 0.5rem;
 }
 
+.about .content,
+.skills .content,
+.projects .content {
+  margin-top: 1rem;
+}
+
 .contact .content {
   /* width: 100%; */
   /* display: flex;
@@ -409,14 +483,21 @@ form button i {
   justify-content: space-evenly;
 }
 
-.footer a {
+.footer a i {
   font-size: 30px;
   color: #dae4fb;
   transition: all 1s;
 }
 
-.footer a:hover {
+.footer a i:hover {
   color: #40a3ff;
+  transform: translateY(2px);
+}
+
+@media screen and (max-width: 1200px) {
+  .boxContainer {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -490,8 +571,14 @@ form button i {
     margin-top: 10%;
   }
 
-  section .content {
-    /* padding: 12% 0; */
+  .about .content,
+  .skills .content,
+  .projects .content {
+    margin-top: 0.1rem;
+  }
+
+  .boxContainer {
+    grid-template-columns: 1fr;
   }
 
   .contact .content {

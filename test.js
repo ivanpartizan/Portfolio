@@ -40,3 +40,16 @@ let optionsTwo = {
 
 let typedOne = new Typed(".typedOne", optionsOne);
 let typedTwo = new Typed(".typedTwo", optionsTwo);
+
+// scrollreveal
+ScrollReveal().reveal(".aboutMeText", {
+  delay: 500,
+  origin: "left",
+  cleanup: true,
+});
+ScrollReveal().reveal(".aboutMeText2", {
+  delay: 1500,
+  origin: "left",
+  cleanup: true,
+});
+ScrollReveal().reveal(".aboutMeText3", { delay: 3500, origin: "left" });
