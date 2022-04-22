@@ -13,6 +13,7 @@ html {
 body {
   background: #0e1c42;
   font-family: "Advent Pro", sans-serif;
+  overflow-x: hidden;
 }
 
 li {
@@ -262,6 +263,67 @@ section .content {
   }
 }
 
+.about {
+  font-family: "Ubuntu", sans-serif;
+  color: #dae4fb;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.about p {
+}
+
+.about .content {
+  text-align: justify;
+  display: grid;
+  /* gap: 20px; */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr auto;
+  grid-template-areas:
+    "first picture"
+    "second picture"
+    "third third";
+}
+
+.aboutMeText {
+  grid-area: first;
+  align-self: center;
+}
+.aboutMeText2 {
+  grid-area: second;
+  align-self: center;
+}
+.aboutMeText3 {
+  grid-area: third;
+}
+.myImageBox {
+  grid-area: picture;
+  justify-self: center;
+  align-self: center;
+}
+
+.skillIcons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: #010912;
+  width: 80%;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.skillIcons i {
+  font-size: 50px;
+  color: #dae4fb;
+  transition: all 1s;
+}
+
+.skillIcons i:hover {
+  color: #40a3ff;
+  transform: translateY(2px);
+}
+
 .boxContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -270,7 +332,7 @@ section .content {
 }
 
 .box {
-  background: white;
+  background: #010912;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -305,19 +367,21 @@ section .content {
 
 .boxContent h3 {
   font-size: 2rem;
-  color: black;
+  font-size: 30px;
+  color: #dae4fb;
 }
 
 .boxContent p {
   padding: 1rem 0;
   font-size: 1.4rem;
-  color: red;
-  /* line-height: 1; */
+  font-size: 20px;
+  color: #dae4fb;
+  line-height: 1.4;
 }
 
 .boxContent a {
   font-size: 25px;
-  color: violet;
+  color: #40a3ff;
   transition: all 0.2s linear;
 }
 
@@ -427,6 +491,7 @@ form button i {
   justify-content: center; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: 1fr 2fr;
   column-gap: 1rem;
   margin-top: 1rem;
   /* justify-content: center;
@@ -495,8 +560,22 @@ form button i {
 }
 
 @media screen and (max-width: 1200px) {
+  .about .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .myImageBox {
+    margin-top: 5%;
+  }
+
   .boxContainer {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .contact .content {
+    grid-template-columns: 1fr;
+    margin-top: 0.1rem;
   }
 }
 
@@ -581,10 +660,29 @@ form button i {
     grid-template-columns: 1fr;
   }
 
-  .contact .content {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.1rem;
+  .box .boxContent {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .boxContent h3 {
+    font-size: 2rem;
+    font-size: 25px;
+    color: black;
+  }
+
+  .boxContent p {
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    font-size: 18px;
+    color: red;
+    /* line-height: 1; */
+  }
+
+  .boxContent a {
+    font-size: 25px;
+    color: violet;
+    transition: all 0.2s linear;
   }
 
   .contactData {
