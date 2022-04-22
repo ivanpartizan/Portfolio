@@ -277,7 +277,7 @@ section .content {
   text-align: justify;
   display: grid;
   /* gap: 20px; */
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr auto;
   grid-template-areas:
     "first picture"
@@ -322,6 +322,19 @@ section .content {
 .skillIcons i:hover {
   color: #40a3ff;
   transform: translateY(2px);
+}
+
+.projectsText {
+  font-family: "Ubuntu", sans-serif;
+  color: #dae4fb;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.projectsText a,
+.projectsText a:visited {
+  color: #40a3ff;
 }
 
 .boxContainer {
@@ -666,28 +679,21 @@ form button i {
   }
 
   .boxContent h3 {
-    font-size: 2rem;
     font-size: 25px;
-    color: black;
   }
 
   .boxContent p {
     padding: 1rem 0;
-    font-size: 1.4rem;
     font-size: 18px;
-    color: red;
-    /* line-height: 1; */
   }
 
   .boxContent a {
     font-size: 25px;
-    color: violet;
     transition: all 0.2s linear;
   }
 
   .contactData {
     margin-bottom: 1rem;
-    /* flex-direction: row; */
   }
 
   .contactCard h3 {
