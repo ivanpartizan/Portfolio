@@ -74,3 +74,58 @@ ScrollReveal().reveal(".myImageBox", {
   },
   reset: true,
 });
+
+ScrollReveal().reveal(".icon1", {
+  origin: "right",
+  distance: "200px",
+  delay: 1000,
+  duration: 1000,
+});
+ScrollReveal().reveal(".icon2", {
+  origin: "right",
+  distance: "200px",
+  delay: 1500,
+  duration: 1000,
+});
+ScrollReveal().reveal(".icon3", {
+  origin: "right",
+  distance: "200px",
+  delay: 2000,
+  duration: 1000,
+});
+ScrollReveal().reveal(".icon4", {
+  origin: "right",
+  distance: "200px",
+  delay: 2500,
+  duration: 1000,
+});
+ScrollReveal().reveal(".icon5", {
+  origin: "right",
+  distance: "200px",
+  delay: 3000,
+  duration: 1000,
+});
+ScrollReveal().reveal(".icon6", {
+  origin: "right",
+  distance: "200px",
+  delay: 3500,
+  duration: 1000,
+});
+ScrollReveal().reveal(".icon7", {
+  origin: "right",
+  distance: "200px",
+  delay: 4000,
+  duration: 1000,
+});
+ScrollReveal().reveal(".icon8", {
+  origin: "right",
+  distance: "200px",
+  delay: 4500,
+  duration: 1000,
+});
+ScrollReveal().reveal(".icon9", {
+  origin: "right",
+  distance: "200px",
+  delay: 5000,
+  duration: 1000,
+});

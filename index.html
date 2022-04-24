@@ -4,564 +4,359 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend Dev Portfolio</title>
-    <link rel="icon" href="./img/israIcon.png" />
-    <link rel="stylesheet" href="./main.css" />
+    <title>Ivan Milenković - Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
     <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    />
-    <link
-      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
-  <body oncopy="return false" oncut="return false" onpaste="return false">
-    <header class="header headerActive" id="header">
-      <div class="logo-div">
-        <a href="#home"
-          ><h1 class="logo">Im<span>.</span></h1></a
-        >
+  <body>
+    <header class="header" id="header">
+      <div class="logo">
+        <a href="#homeSection">
+          <h1 class="home">MI<span>.</span></h1>
+        </a>
       </div>
-
-      <div class="navBar" id="nav-Bar">
+      <nav class="navBar" id="navBar">
         <ul class="navList">
           <li class="navItem">
-            <a href="#about" class="navLink">
-              <span class="number">01</span> My Story</a
+            <a href="#about" class="navLink"
+              ><span class="number">01</span> My Story</a
             >
           </li>
-
           <li class="navItem">
-            <a href="#skills" class="navLink">
-              <span class="number">02</span> Skills</a
+            <a href="#skills" class="navLink"
+              ><span class="number">02</span> Skills</a
             >
           </li>
-
           <li class="navItem">
-            <a href="#projects" class="navLink">
-              <span class="number">03</span> Projects</a
+            <a href="#projects" class="navLink"
+              ><span class="number">03</span> Projects</a
             >
           </li>
-
           <li class="navItem">
-            <a href="#contact" class="navLink">
-              <span class="number">04</span> Contact</a
+            <a href="#contact" class="navLink"
+              ><span class="number">04</span> Contact</a
             >
           </li>
-
-          <div class="closeIcon" id="closeIconID">
-            <i class="bx bxs-x-circle icon closeIc"></i>
-          </div>
+          <div class="closeIcon"><i class="bx bx-x-circle bx-md"></i></div>
         </ul>
 
-        <div class="resumeDiv">
-          <a
-            download=""
-            href="./ISRAEL ABAHO FRONT END WEB DEVELOEPER RESUME.pdf"
-            class="resumeBtn"
-            >Resume</a
-          >
+        <div class="resume">
+          <a href="./CV.pdf" download class="resumeBtn">Resume</a>
         </div>
-      </div>
-
-      <div class="navToggle" id="toggleId">
-        <i class="uil uil-list-ui-alt toggleIcon"></i>
-      </div>
+      </nav>
+      <div class="menuIcon"><i class="bx bx-menu-alt-right bx-md"></i></div>
     </header>
 
-    <!-- <div class="toTopBtn">
-        <a href="#contact"><i class="uil uil-angle-double-up toTopIcon"></i></a>
-    </div> -->
-
-    <!-- <div class="col leftCol">
-      <div class="divIcons">
-        <div>
-          <a href="https://www.linkedin.com/in/isra-tech/" target="_blank">
-            <i class="uil uil-linkedin-alt leftColIcon"></i
-          ></a>
-        </div>
-        <div>
-          <a href="https://github.com/IsraelAbaho" target="_blank"
-            ><i class="uil uil-github-alt leftColIcon"></i
-          ></a>
-        </div>
-        <div>
-          <a href="https://twitter.com/IsraelAbaho21" target="_blank">
-            <i class="uil uil-twitter-alt leftColIcon"></i
-          ></a>
-        </div>
-      </div>
-      <div class="divLine"></div>
-    </div>
-
-    <div class="col rightCol">
-      <div class="emailDiv">argentinaivan@hotmail.com</div>
-      <div class="rightdivLine"></div>
-    </div>
-
-    <!-- Body Section -->
-    <div class="bodyContainer">
-      <!-- Home section -->
-      <section class="home section" id="home">
-        <div class="container">
-          <div class="content">
-            <div class="contentText">
-              <h6 class="introTxt">Hi, my name is</h6>
-              <h1 class="name">Ivan Milenkovic.</h1>
-              <h3 class="subIntro">
-                I design and develop web based components and systems.
-              </h3>
-              <p class="homeP">
-                I'm a frontend developer with basic knowledge in designing great
-                User interface and develop real life interactions.
-              </p>
-            </div>
-
-            <div class="contentBtn">
-              <a href="#contact"
-                >Get In touch <i class="uil uil-message Icon"></i
-              ></a>
-            </div>
-          </div>
-          <div class="scrollDiv">
-            <i class="uil uil-mouse-alt MouseIcon"></i>
-            <a href="#about"> <h6 class="scroll">Scroll Down</h6></a>
-            <i class="uil uil-angle-double-down icon"></i>
-          </div>
-        </div>
+    <div class="container">
+      <section class="homeSection" id="homeSection">
+        <h2><span class="typedOne"></span></h2>
+        <h1>Ivan Milenković</h1>
+        <h2><span class="typedTwo"></span></h2>
+        <a href="#about" class="resumeBtn">About Me</a>
       </section>
 
-      <!-- About section -------------------------------------------------->
-
-      <section class="about section" id="about">
-        <div class="container">
-          <div class="content">
-            <div class="sectionTitle">
-              <span class="titleNumber">01. </span>
-              <h5 class="titleText">
-                My Story
-                <div class="underline"><span></span></div>
-              </h5>
-            </div>
-
-            <div class="grid">
-              <div class="cta">
-                <h4 class="ctaDescription">
-                  I'm a success-driven, determined Frontend developer. I have
-                  experience using HTML SCSS & JavaScript to build accessible
-                  component-based web pages and systems. A passionate person
-                  willing to learn more technologies to become a better
-                  developer than i was yesterday. So determined and result
-                  orietend. <br />
-                  <br />
-                  I have also achieved a good understanding of relational
-                  databases, as well as solid computer science foundations such
-                  as complex algorithms and code challenge type problem solving.
-                </h4>
-                <div class="aboutBtn">
-                  <a
-                    download=""
-                    href="./ISRAEL ABAHO FRONT END WEB DEVELOEPER RESUME.pdf"
-                    >Download CV <i class="uil uil-import downloadIcon"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="lower">
-                <div class="aboutImgDiv">
-                  <img
-                    src="./img/isra-png.png"
-                    alt="Israel Image"
-                    class="aboutImg"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills Section  -->
-
-      <section class="skill section" id="skills">
-        <div class="container">
+      <section class="about" id="about">
+        <div class="sectionContainer">
           <div class="sectionTitle">
-            <span class="titleNumber">02.</span>
+            <span class="titleNumber">01</span>
             <h5 class="titleText">
-              My Skills
+              My Story
               <div class="underline"><span></span></div>
             </h5>
           </div>
-
-          <div class="skillsContent">
-            <!-- skill one -->
-            <div class="skillInfo">
-              <div class="skillInfoHeader">
-                <h1 class="skillTitle">Frontend Development</h1>
-                <span class="skillSubTotal">1 year experience</span>
-              </div>
-              <div class="skillImage">
-                <img src="./img/html.png" alt="" class="skillImageIcon" />
-                <img src="./img/css.png" alt="" class="skillImageIcon" />
-                <img src="./img/sass.png" alt="" class="skillImageIcon" />
-                <img src="./img/javascript.png" alt="" class="skillImageIcon" />
-                <img src="./img/react.png" alt="" class="skillImageIcon" />
-              </div>
-            </div>
-
-            <!-- skill-Two -->
-            <div class="skillInfo">
-              <div class="skillInfoHeader">
-                <h1 class="skillTitle">UI/UX Designing</h1>
-                <span class="skillSubTotal">2 years experience</span>
-              </div>
-              <div class="skillImage">
-                <img
-                  src="./img/adobe-adobe-xd.png"
-                  alt=""
-                  class="skillImageIcon"
-                />
-                <img src="./img/figma.png" alt="" class="skillImageIcon" />
-                <img
-                  src="./img/adobe-photoshop.png"
-                  alt=""
-                  class="skillImageIcon"
-                />
-              </div>
-            </div>
-            <!-- Skill-Three -->
-            <div class="skillInfo">
-              <div class="skillInfoHeader">
-                <h1 class="skillTitle">Other Skills</h1>
-                <span class="skillSubTotal">1 year experience</span>
-              </div>
-              <div class="skillImage">
-                <img src="./img/wordpress.png" alt="" class="skillImageIcon" />
-                <img src="./img/git.png" alt="" class="skillImageIcon" />
-                <img src="./img/github.png" alt="" class="skillImageIcon" />
-              </div>
-            </div>
+        </div>
+        <div class="content">
+          <p class="aboutMeText aboutMeText1">
+            To my surprise, I recently found out that simple website I created
+            as a high school student - a long time ago - is still
+            <a href="http://yusport.itgo.com/srpski.html">alive</a>. Back then,
+            I enjoyed spending time on my computer, watching sports, writing
+            about sports, and I combined all those interests together into
+            sporting news website. At that time, there weren't many similar
+            content out there and I remember that even my incredibly simple page
+            had regular visitors. I have been maintaining the page and updating
+            the content for around six months before my computer died. I didn't
+            get new one for a long time and, unfortunately, my enthusiasm for
+            the website had waned.
+          </p>
+          <br />
+          <p class="aboutMeText aboutMeText2">
+            I didn't care about learning in high school and had no ambition to
+            do anything meaningful in my life. That's why I chose easy path that
+            led me to enroll at University of Belgrade's Faculty of Geography -
+            Department of Tourism. It wasn't too challenging, I graduated and
+            later attended several courses in order to improve my practical
+            skills. However, I didn't work in the tourism industry after all.
+          </p>
+          <br />
+          <p class="aboutMeText aboutMeText3">
+            Instead, my career has been sports-related - I worked as sports
+            journalist, statistician, scout, odds compiler... Some five years
+            ago, I started coding as a hobby after discovering websites like
+            Coursera, edX and Udemy. I found many interesting courses and really
+            liked some of them, especially programming courses. Fast forward to
+            2020 and start of the pandemic - sports practically stopped and I
+            decided it is time for change. My decision was to pursue a career in
+            programming and began working on my coding skills seriously.
+          </p>
+          <div class="myImageBox">
+            <img src="images/Me.png" alt="" class="myImage" />
           </div>
-          <span class="skillDescription">
-            NB: I'm willing to learn other skills as required.
-          </span>
         </div>
       </section>
 
-      <!-- PROJECTS SECTION  ---------------------------------------------------->
-
-      <section class="project section" id="projects">
-        <div class="container">
+      <section class="skills" id="skills">
+        <div class="sectionContainer">
           <div class="sectionTitle">
-            <span class="titleNumber">03. </span>
+            <span class="titleNumber">02</span>
             <h5 class="titleText">
-              My Projects
+              Skills
               <div class="underline"><span></span></div>
             </h5>
           </div>
-
-          <div class="contentHeader">
-            <span class="projectDescription">
-              Here are some of the projects with in my experience.
-            </span>
+        </div>
+        <div class="content">
+          <p class="skillsText">
+            Python was the first programming language that I started to learn
+            thanks to Dr. Chuck's
+            <a href="https://www.py4e.com/">Python for Everybody</a> course. I
+            also had hands-on experience working with C, as part of Harvard's
+            <a
+              href="https://pll.harvard.edu/course/cs50-introduction-computer-science?delta=0"
+              >CS50: Introduction to Computer Science</a
+            >, but haven't built on that. Since my primary field of interest is
+            web development, I spend most of the time learning JavaScript.
+            Besides Vanilla JS, I am working on improving my React skills.
+            Obviously, I have knowledge of HTML/CSS/Sass and my preferred CSS
+            framework is Bootstrap. I am pretty comfortable with using Python's
+            Django and Node.js/Express on the backend. Additionally, I am
+            familiar with SQL. MySQL and SQLite are my favourite relational
+            database management systems.
+          </p>
+          <div class="skillIcons">
+            <i class="bx bxl-html5 icon1"></i>
+            <i class="bx bxl-css3 icon2"></i>
+            <i class="bx bxl-sass icon3"></i>
+            <i class="bx bxl-bootstrap icon4"></i>
+            <i class="bx bxl-javascript icon5"></i>
+            <i class="bx bxl-react icon6"></i>
+            <i class="bx bxl-nodejs icon7"></i>
+            <i class="bx bxl-python icon8"></i>
+            <i class="bx bxs-data icon9"></i>
           </div>
-
-          <!-- FRONTEND BOXES---------------------------------------------------- -->
-          <div class="boxes">
-            <div class="box">
-              <div class="webContent">
-                <div class="webContentTop">
-                  <div>
-                    <a
-                      href="https://cvgeneratorapp.netlify.app/"
-                      class="wrapperLink Indicator"
-                      target="_blank"
-                    ></a>
-                  </div>
-                  <a
-                    href="https://cvgeneratorapp.netlify.app/"
-                    class="live"
-                    target="_blank"
-                    ><span>LIVE</span></a
-                  >
-                  <a
-                    href="https://github.com/IsraelAbaho/cv-generator-app"
-                    class="wrapperLink"
-                    target="_blank"
-                    ><i class="uil uil-github-alt"></i
-                  ></a>
-                </div>
-
-                <div class="contentImg">
-                  <a href="https://cvgeneratorapp.netlify.app/" target="_blank"
-                    ><img src="./img/cvGenerator.png" class="contentImage"
-                  /></a>
-                </div>
-
-                <div class="wrapperText">
-                  <h2 class="title">Resume Generator App</h2>
-                  <p>
-                    This application helps user to generate CV by filling the
-                    fields.
-                  </p>
-                  <div class="software">
-                    <span>Html</span>
-                    <span>SCSS</span>
-                    <span>Js (DOM)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="box">
-              <div class="webContent">
-                <div class="webContentTop">
-                  <div>
-                    <a
-                      href="https://israelfriendsapp.netlify.app/"
-                      class="wrapperLink Indicator"
-                      target="_blank"
-                    ></a>
-                  </div>
-                  <a
-                    href="https://israelfriendsapp.netlify.app/"
-                    class="live"
-                    target="_blank"
-                    ><span>LIVE</span></a
-                  >
-
-                  <a
-                    href="https://github.com/IsraelAbaho/friendsListApplication"
-                    class="wrapperLink"
-                    target="_blank"
-                    ><i class="uil uil-github-alt"></i
-                  ></a>
-                </div>
-
-                <div class="contentImg">
-                  <a
-                    href="https://israelfriendsapp.netlify.app/"
-                    target="_blank"
-                    ><img src="./projects/friendsApp.png" class="contentImage"
-                  /></a>
-                </div>
-
-                <div class="wrapperText">
-                  <h2 class="title">Friends' Contacts App</h2>
-                  <p>
-                    A friends' list application where a user can add friends
-                    from the input field, i utilised JS DOM manipulation to come
-                    up with this application
-                  </p>
-                  <div class="software">
-                    <span>Html</span>
-                    <span>SCSS</span>
-                    <span>Javascript</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="webContent">
-                <div class="webContentTop">
-                  <div>
-                    <a
-                      href="https://orliconstructionisra.netlify.app/"
-                      class="wrapperLink Indicator"
-                      target="_blank"
-                    ></a>
-                  </div>
-                  <a
-                    href="https://israelfriendsapp.netlify.app/"
-                    class="live"
-                    target="_blank"
-                    ><span>LIVE</span></a
-                  >
-                  <a
-                    href="https://github.com/IsraelAbaho/Orli-Construction-Co-Website"
-                    class="wrapperLink"
-                    target="_blank"
-                    ><i class="uil uil-github-alt"></i
-                  ></a>
-                </div>
-
-                <div class="contentImg">
-                  <a
-                    href="https://orliconstructionisra.netlify.app/"
-                    target="_blank"
-                    ><img src="./projects/orli.png" class="contentImage"
-                  /></a>
-                </div>
-
-                <div class="wrapperText">
-                  <h2 class="title">Construction co. website</h2>
-                  <p>
-                    This a client based website for a construction company in my
-                    local area. Increased quotation request by 17%.
-                  </p>
-                  <div class="software">
-                    <span>Html.</span>
-                    <span>SCSS.</span>
-                    <span>Javascript.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="webContent">
-                <div class="webContentTop">
-                  <div>
-                    <a
-                      href="https://healthyfoodcollection.netlify.app/"
-                      class="wrapperLink Indicator"
-                      target="_blank"
-                    ></a>
-                  </div>
-                  <a
-                    href="https://israelfriendsapp.netlify.app/"
-                    class="live"
-                    target="_blank"
-                    ><span>LIVE</span></a
-                  >
-                  <a
-                    href="https://github.com/IsraelAbaho/Food-Collection-Website"
-                    class="wrapperLink"
-                    target="_blank"
-                    ><i class="uil uil-github-alt"></i
-                  ></a>
-                </div>
-
-                <div class="contentImg">
-                  <a
-                    href="https://healthyfoodcollection.netlify.app/"
-                    target="_blank"
-                    ><img src="./projects/food (2).png" class="contentImage"
-                  /></a>
-                </div>
-
-                <div class="wrapperText">
-                  <h2 class="title">Food Collection Website</h2>
-                  <p>
-                    This is an online food website with add to cart function and
-                    shopping module.
-                  </p>
-                  <div class="software">
-                    <span>Html</span>
-                    <span>SCSS</span>
-                    <span>Javascript</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="webContent">
-                <div class="webContentTop">
-                  <div>
-                    <a
-                      href="https://isratravelwebsite.netlify.app/"
-                      class="wrapperLink Indicator"
-                      target="_blank"
-                    ></a>
-                  </div>
-                  <a
-                    href="https://israelfriendsapp.netlify.app/"
-                    class="live"
-                    target="_blank"
-                    ><span>LIVE</span></a
-                  >
-                  <a
-                    href="https://github.com/IsraelAbaho/Travel-Website"
-                    class="wrapperLink"
-                    target="_blank"
-                    ><i class="uil uil-github-alt"></i
-                  ></a>
-                </div>
-
-                <div class="contentImg">
-                  <a
-                    href="https://isratravelwebsite.netlify.app/"
-                    target="_blank"
-                    ><img src="./projects/travelimg.png" class="contentImage"
-                  /></a>
-                </div>
-
-                <div class="wrapperText">
-                  <h2 class="title">Travel Website</h2>
-                  <p>
-                    This is a travel website used by anybody to books a trip to
-                    the different places
-                  </p>
-                  <div class="software">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="webContent">
-                <div class="webContentTop">
-                  <div>
-                    <a
-                      href="https://appointmentscheduleapp.netlify.app/"
-                      class="wrapperLink Indicator"
-                      target="_blank"
-                    ></a>
-                  </div>
-                  <a
-                    href="https://israelfriendsapp.netlify.app/"
-                    class="live"
-                    target="_blank"
-                    ><span>LIVE</span></a
-                  >
-                  <a
-                    href="https://github.com/IsraelAbaho/Appointment-schedule-website"
-                    class="wrapperLink"
-                    target="_blank"
-                    ><i class="uil uil-github-alt"></i
-                  ></a>
-                </div>
-
-                <div class="contentImg">
-                  <a
-                    href="https://appointmentscheduleisra.netlify.app/"
-                    target="_blank"
-                    ><img src="./projects/appointment.png" class="contentImage"
-                  /></a>
-                </div>
-
-                <div class="wrapperText">
-                  <h2 class="title">Appointment Schedule App</h2>
-                  <p>
-                    This is the app i thought could help most manager CEOs or
-                    anybody to schedule meetings in a more modern way.
-                  </p>
-                  <div class="software">
-                    <span>Html</span>
-                    <span>SCSS</span>
-                    <span>Javascript</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <p class="skillsText">
+            Problem solving is important part of my skill set. I enjoy solving
+            algorithm challenges at
+            <a href="https://www.codewars.com/users/ivanpartizan"
+              >Codewars website</a
+            >
+            and that practically became my daily routine. Currently, I am ranked
+            in top 5 percent among all developers who are solving katas at
+            Codewars.
+          </p>
+          <div class="codewarsRank">
+            <img
+              src="https://www.codewars.com/users/ivanpartizan/badges/small"
+              alt=""
+            />
           </div>
+          <p class="skillsText">
+            I am on continuous learning journey and I am doing my best to
+            improve as a developer with each passing day. Apart from working on
+            above mentioned skills, my next goal is to add TypeScript to the
+            list of languages I am comfortable working with. Of course, I am
+            more than willing to learn any new language/framework/technology
+            needed to get the job done.
+          </p>
+        </div>
+      </section>
 
-          <div class="projectFooter">
-            <a href="./archives.html">SEE MORE</a>
+      <section class="projects" id="projects">
+        <div class="sectionContainer">
+          <div class="sectionTitle">
+            <span class="titleNumber">03</span>
+            <h5 class="titleText">
+              Projects
+              <div class="underline"><span></span></div>
+            </h5>
+          </div>
+        </div>
+        <div class="content">
+          <p class="projectsText">
+            Focus in most of my projects is on pure JavaScript functionality. I
+            build fully functional, dynamic and interactive web apps - some of
+            those load data from web APIs. These are some of my projects, while
+            new projects will be added regularly. Source code for all of them
+            (as well as my old code) is available in my GitHub
+            <a
+              href="https://github.com/ivanpartizan?tab=repositories"
+              target="_blank"
+              >repositories</a
+            >.
+          </p>
+          <div class="boxContainer">
+            <div class="box">
+              <div class="image">
+                <img src="images/WorldAtlas.png" alt="" />
+              </div>
+              <div class="boxContent">
+                <h3>World Countries</h3>
+                <p>
+                  Data about all countries in the world via Rest Countries API
+                </p>
+                <div>
+                  <a
+                    href="https://gallant-fermat-04b6be.netlify.app/"
+                    target="_blank"
+                    >Visit Website <i class="bx bxs-chevrons-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="images/WorldWeather.png" alt="" />
+              </div>
+              <div class="boxContent">
+                <h3>World Weather</h3>
+                <p>
+                  Weather forecast and current weather data for any city in the
+                  world via Weather API
+                </p>
+                <a
+                  href="https://compassionate-hawking-3861d4.netlify.app/"
+                  target="_blank"
+                  >Visit Website <i class="bx bxs-chevrons-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="images/WorldCurrency.png" alt="" />
+              </div>
+              <div class="boxContent">
+                <h3>Currency Converter</h3>
+                <p>
+                  Accurate and reliable foreign exchange rates via Exchange
+                  Rates API
+                </p>
+                <a
+                  href="https://determined-stonebraker-f792ff.netlify.app/"
+                  target="_blank"
+                  >Visit Website <i class="bx bxs-chevrons-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="images/LaLiga.png" alt="" />
+              </div>
+              <div class="boxContent">
+                <h3>La Liga</h3>
+                <p>
+                  All the results, standings and other important info about
+                  Spanish La Liga via football-data API
+                </p>
+                <a
+                  href="https://infallible-morse-a320f1.netlify.app/"
+                  target="_blank"
+                  >Visit Website <i class="bx bxs-chevrons-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="images/Quiz.png" alt="" />
+              </div>
+              <div class="boxContent">
+                <h3>Quiz</h3>
+                <p>
+                  Put your knowledge about different topics to the test with
+                  this fun quiz - questions via Open Trivia API
+                </p>
+                <a
+                  href="https://boring-kirch-e6c2ca.netlify.app/"
+                  target="_blank"
+                  >Visit Website <i class="bx bxs-chevrons-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="images/Memorama.png" alt="" />
+              </div>
+              <div class="boxContent">
+                <h3>Memorama</h3>
+                <p>
+                  Level up your memory with this online memory card game - flip
+                  the cards and match them
+                </p>
+                <a
+                  href="https://gracious-wilson-5f1443.netlify.app/"
+                  target="_blank"
+                  >Visit Website <i class="bx bxs-chevrons-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="images/RPSLS.png" alt="" />
+              </div>
+              <div class="boxContent">
+                <h3>Rock Paper Scissors Lizard Spock</h3>
+                <p>
+                  Play a game of chance that expands the original 'Rock, Paper,
+                  Scissors' game - computer is your rival
+                </p>
+                <a
+                  href="https://dazzling-thompson-f08bba.netlify.app/"
+                  target="_blank"
+                  >Visit Website <i class="bx bxs-chevrons-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="images/soon.png" alt="" />
+              </div>
+              <div class="boxContent">
+                <h3>Tours & Travel</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quidem, ab.
+                </p>
+                <a href="#"
+                  >Visit Website <i class="bx bxs-chevrons-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="images/soon.png" alt="" />
+              </div>
+              <div class="boxContent">
+                <h3>Tours & Travel</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quidem, ab.
+                </p>
+                <a href="#"
+                  >Visit Website <i class="bx bxs-chevrons-right"></i
+                ></a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- CONTACT SECTION ------------------------- -->
-
-      <section class="section" id="contact">
-        <div class="container">
+      <section class="contact" id="contact">
+        <div class="sectionContainer">
           <div class="sectionTitle">
-            <span class="titleNumber">04 . </span>
+            <span class="titleNumber">04</span>
             <h5 class="titleText">
               Contact Me
               <div class="underline"><span></span></div>
@@ -569,29 +364,29 @@
           </div>
         </div>
 
-        <div class="contactContent grid">
-          <div class="contactTop">
-            <div>
-              <i class="uil uil-incoming-call contactIcon"></i>
+        <div class="content">
+          <div class="contactData">
+            <div class="contactCard">
+              <i class="bx bx-current-location"></i>
               <span>
-                <h2 class="contactTitle">Call Me</h2>
-                <span class="contactDesc"> +001 000 000 000 </span>
+                <h3 class="contactTitle">Location</h3>
+                <h2 class="contactText">11030 Belgrade, Serbia</h2>
               </span>
             </div>
 
-            <div>
-              <i class="uil uil-envelope-download contactIcon"></i>
+            <div class="contactCard">
+              <i class="bx bx-phone"></i>
               <span>
-                <h2 class="contactTitle">Email</h2>
-                <span class="contactDesc"> argentinaivan@hotmail.com </span>
+                <h3 class="contactTitle">Phone</h3>
+                <h2 class="contactText">+381 63 7678456</h2>
               </span>
             </div>
 
-            <div>
-              <i class="uil uil-map-marker contactIcon"></i>
+            <div class="contactCard">
+              <i class="bx bx-envelope"></i>
               <span>
-                <h2 class="contactTitle">Location</h2>
-                <span class="contactDesc"> Chicago </span>
+                <h3 class="contactTitle">Email</h3>
+                <h2 class="contactText">ivanmilenkovic@proton.me</h2>
               </span>
             </div>
           </div>
@@ -601,26 +396,23 @@
             method="POST"
             id="contactForm"
           >
-            <div class="formTop">
+            <input
+              type="hidden"
+              name="_next"
+              value="https://ivanmilenkovic.netlify.app/thankyou.html"
+            />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="Message" />
+
+            <div class="formFields">
               <span class="field">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" required name="Full Name" />
-                <input
-                  type="hidden"
-                  name="_subject"
-                  value="Portifolio Message!"
-                />
+                <label for="name">Name</label>
+                <input type="text" id="name" name="Name" required />
               </span>
 
               <span class="field">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="Email" required />
-                <input
-                  type="hidden"
-                  name="_next"
-                  value="https://ivanmilenkovic.netlify.app/thankyou.html"
-                />
-                <input type="hidden" name="_captcha" value="false" />
               </span>
             </div>
 
@@ -633,45 +425,33 @@
               placeholder="Your Message"
             ></textarea>
 
-            <button type="submit">Send <i class="uil uil-message"></i></button>
+            <button type="submit">Send <i class="bx bx-send"></i></button>
           </form>
         </div>
       </section>
+    </div>
 
-      <div class="mobileIcons">
-        <div>
+    <footer>
+      <div class="footer">
+        <p>&copy; 2022 Ivan Milenković.</p>
+        <span class="icons">
           <a
             href="https://www.linkedin.com/in/ivan-milenkovic-07183034/"
             target="_blank"
           >
-            <i class="uil uil-linkedin-alt leftColIcon"></i
+            <i class="bx bxl-linkedin-square"></i>
+          </a>
+          <a href="https://github.com/ivanpartizan" target="_blank">
+            <i class="bx bxl-github"></i>
+          </a>
+          <a href="https://www.codewars.com/users/ivanpartizan" target="_blank">
+            <i class="bx bx-code"></i
           ></a>
-        </div>
-        <div>
-          <a href="https://github.com/ivanpartizan" target="_blank"
-            ><i class="uil uil-github-alt leftColIcon"></i
-          ></a>
-        </div>
-        <div>
-          <a href="https://twitter.com/IsraelAbaho21" target="_blank">
-            <i class="uil uil-twitter-alt leftColIcon"></i
-          ></a>
-        </div>
+        </span>
       </div>
+    </footer>
 
-      <!-- FOOTER SECTION ------------------------------------------>
-      <section class="section">
-        <div class="footer">
-          <span
-            >&copy; All rights reserved. <br />
-            Ivan Milenkovic. 2022</span
-          >
-        </div>
-      </section>
-    </div>
-    -->
-
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
   </body>
 </html>

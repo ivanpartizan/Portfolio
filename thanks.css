@@ -1,0 +1,35 @@
+.navList {
+  text-decoration: line-through;
+}
+
+.navItem,
+.navLink {
+  cursor: not-allowed;
+}
+
+.thankYouMessage {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.thankYouMessage .textTitle,
+.thankYouMessage .textSubtitle {
+  color: #dae4fb;
+  font-weight: bold;
+}
+
+.textTitle {
+  font-size: 40px;
+  line-height: 2;
+}
+
+.textSubtitle {
+  font-size: 25px;
+  line-height: 2;
+}

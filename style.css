@@ -270,13 +270,9 @@ section .content {
   line-height: 1.5;
 }
 
-.about p {
-}
-
 .about .content {
   text-align: justify;
   display: grid;
-  /* gap: 20px; */
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr auto;
   grid-template-areas:
@@ -285,7 +281,7 @@ section .content {
     "third third";
 }
 
-.aboutMeText {
+.aboutMeText1 {
   grid-area: first;
   align-self: center;
 }
@@ -309,7 +305,7 @@ section .content {
   justify-content: center;
   background: #010912;
   width: 80%;
-  margin: 1rem auto;
+  margin: 2rem auto;
   padding: 1rem;
 }
 
@@ -324,6 +320,8 @@ section .content {
   transform: translateY(2px);
 }
 
+.aboutMeText,
+.skillsText,
 .projectsText {
   font-family: "Ubuntu", sans-serif;
   color: #dae4fb;
@@ -332,6 +330,22 @@ section .content {
   text-align: justify;
 }
 
+.codewarsRank {
+  width: 100%;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.codewarsRank img {
+  height: 2rem;
+}
+
+.aboutMeText a,
+.aboutMeText a:visited,
+.skillsText a,
+.skillsText a:visited,
 .projectsText a,
 .projectsText a:visited {
   color: #40a3ff;
@@ -379,14 +393,12 @@ section .content {
 }
 
 .boxContent h3 {
-  font-size: 2rem;
   font-size: 30px;
   color: #dae4fb;
 }
 
 .boxContent p {
   padding: 1rem 0;
-  font-size: 1.4rem;
   font-size: 20px;
   color: #dae4fb;
   line-height: 1.4;
@@ -408,15 +420,6 @@ section .content {
 }
 
 /* Contact Form */
-form {
-  /* display: flex; */
-  /* display: grid; 
-   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-}
-
 .formFields {
   display: grid;
   gap: 1rem;
@@ -498,17 +501,11 @@ form button i {
 }
 
 .contact .content {
-  /* width: 100%; */
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   grid-template-columns: 1fr 2fr;
   column-gap: 1rem;
   margin-top: 1rem;
-  /* justify-content: center;
-  align-items: center; */
 }
 
 .contactData {
@@ -519,16 +516,12 @@ form button i {
 }
 
 .contactCard {
-  /* background: yellow; */
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
-  /* justify-content: end; */
   margin: 1rem;
   padding: 1rem;
   background: rgba(1, 9, 18, 0.9);
   border-radius: 5px;
-  /* background: yellow; */
 }
 
 .contactCard i {
@@ -541,12 +534,6 @@ form button i {
 .contactCard span {
   color: #dae4fb;
 }
-
-/* p {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 20px;
-  text-align: left;
-} */
 
 .footer {
   width: 100%;
